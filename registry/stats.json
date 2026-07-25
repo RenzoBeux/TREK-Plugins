@@ -1,20 +1,20 @@
 {
-  "updatedAt": "2026-07-24",
+  "updatedAt": "2026-07-25",
   "plugins": {
-    "budget-table": 242,
-    "koffi": 294,
-    "nihongo-nugget": 90,
-    "suica-saver": 74,
-    "trek-x-japan": 211,
-    "trekichiki": 120,
-    "wiki-place-context": 366,
-    "trek-gotify": 64,
-    "trip-todos": 281,
-    "flight-tracker": 366,
-    "reservations": 156,
-    "trek-vox-plugin": 32,
-    "trip-research": 86,
-    "trip-importer": 36,
-    "featured-guides": 29
+    "budget-table": 249,
+    "koffi": 303,
+    "nihongo-nugget": 91,
+    "suica-saver": 76,
+    "trek-x-japan": 215,
+    "trekichiki": 121,
+    "wiki-place-context": 387,
+    "trek-gotify": 65,
+    "trip-todos": 298,
+    "flight-tracker": 395,
+    "reservations": 172,
+    "trek-vox-plugin": 34,
+    "trip-research": 106,
+    "trip-importer": 45,
+    "featured-guides": 48
   }
 }
