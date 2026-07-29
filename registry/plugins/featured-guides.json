@@ -7,6 +7,18 @@
   "type": "page",
   "versions": [
     {
+      "version": "1.3.0",
+      "gitTag": "v1.3.0",
+      "commitSha": "2430480ac3fcc09256615abea2571216992f73a6",
+      "downloadUrl": "https://github.com/raduwolf12/featured-guides/releases/download/v1.3.0/plugin.zip",
+      "sha256": "f00203484deff3ae3c2a23713ed12b1f7cbc6f7cd1568e8dfd4533af9cbac743",
+      "trek": ">=3.4.0 <4.0.0",
+      "size": 563572,
+      "apiVersion": 1,
+      "nativeModules": false,
+      "publishedAt": "2026-07-27T19:43:30.799Z"
+    },
+    {
       "version": "1.1.0",
       "gitTag": "v1.1.0",
       "commitSha": "07d43655fde1079741d73cdfe32fda29c5fecf51",
