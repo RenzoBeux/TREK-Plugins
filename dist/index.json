@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-29T06:09:42.876Z",
+  "generatedAt": "2026-07-29T17:14:16.792Z",
   "plugins": [
     {
       "id": "budget-table",
@@ -424,6 +424,32 @@
       "boundOwner": "fbnlrz",
       "downloadCount": 125,
       "screenshotUrl": "https://raw.githubusercontent.com/fbnlrz/trekichiki/4bbbe1608d116b9bd3bf335ce81252e5e64c1083/docs/screenshot.png"
+    },
+    {
+      "id": "trip-gallery",
+      "name": "Trip Gallery",
+      "author": "raduwolf12",
+      "description": "Shared photo gallery for your trip, with automatic HEIC conversion.",
+      "repo": "raduwolf12/trip-gallery",
+      "type": "trip-page",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "gitTag": "v1.0.0",
+          "commitSha": "ad09889d92540a4a46697f66d65995e7bc5bdbed",
+          "downloadUrl": "https://github.com/raduwolf12/trip-gallery/releases/download/v1.0.0/plugin.zip",
+          "sha256": "233a9229d81177a5b7dbc8097033ec1de3c17a9be0942d617fa667fc671eb32f",
+          "trek": ">=3.4.0 <4.0.0",
+          "size": 358747,
+          "apiVersion": 1,
+          "nativeModules": false,
+          "publishedAt": "2026-07-29T16:46:17.845Z"
+        }
+      ],
+      "icon": "Images",
+      "reviewedAt": "2026-07-29",
+      "boundOwner": "raduwolf12",
+      "screenshotUrl": "https://raw.githubusercontent.com/raduwolf12/trip-gallery/ad09889d92540a4a46697f66d65995e7bc5bdbed/docs/screenshot.png"
     },
     {
       "id": "trip-importer",
