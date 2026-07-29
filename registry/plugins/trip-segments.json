@@ -1,0 +1,31 @@
+{
+  "id": "trip-segments",
+  "name": "Trip Segments",
+  "author": "Renzo Beux",
+  "description": "Split long multi-destination trips into colour-coded legs, with a per-leg view of the schedule, bookings and stays.",
+  "repo": "RenzoBeux/TREK-trip-segments",
+  "type": "trip-page",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "gitTag": "v1.0.0",
+      "commitSha": "0e5eea9487308a26b7a284fc9ac9c1a728058599",
+      "downloadUrl": "https://github.com/RenzoBeux/TREK-trip-segments/releases/download/v1.0.0/plugin.zip",
+      "sha256": "adc74ee442d4d76e9154bc9ab981136b186a71b22e3ccafac845b203907e1531",
+      "trek": ">=3.4.0 <4.0.0",
+      "size": 37161,
+      "apiVersion": 1,
+      "nativeModules": false,
+      "publishedAt": "2026-07-29T15:46:57.550Z",
+      "signature": "sm1V5GGsO5Ch872z4QCYBoxZCzlFqY23S6dmHoOxGqdcuLV4ZXuWbZ+L0tPWkYO+1lZGhSHaya7h8Qmdi9S0DA=="
+    }
+  ],
+  "icon": "Route",
+  "homepage": "https://github.com/RenzoBeux/TREK-trip-segments",
+  "tags": [
+    "planning",
+    "itinerary",
+    "multi-destination"
+  ],
+  "authorPublicKey": "DupqG0Rp0DxlJRRSxAnFpw6I5v/w5iu7fREFh3Ss5hg="
+}
