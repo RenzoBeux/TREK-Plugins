@@ -85,6 +85,11 @@
       "boundOwner": "RenzoBeux",
       "repo": "RenzoBeux/TREK-trip-segments",
       "firstReviewedAt": "2026-07-29"
+    },
+    "amap-search": {
+      "boundOwner": "imusic-487",
+      "repo": "imusic-487/Trek-Amap-search",
+      "firstReviewedAt": "2026-08-12"
     }
   }
 }
