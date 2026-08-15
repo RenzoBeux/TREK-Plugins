@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-14T05:07:46.006Z",
+  "generatedAt": "2026-08-15T03:56:50.132Z",
   "plugins": [
     {
       "id": "amap-search",
@@ -37,7 +37,7 @@
       ],
       "reviewedAt": "2026-08-12",
       "boundOwner": "imusic-487",
-      "downloadCount": 16,
+      "downloadCount": 23,
       "screenshotUrl": "https://raw.githubusercontent.com/imusic-487/Trek-Amap-search/2ebc070daa1d6408ccb9ec7265dc8c194ede0a69/docs/screenshot.png"
     },
     {
@@ -67,7 +67,7 @@
       ],
       "reviewedAt": "2026-07-18",
       "boundOwner": "jubnl",
-      "downloadCount": 348,
+      "downloadCount": 351,
       "screenshotUrl": "https://raw.githubusercontent.com/jubnl/Trek_Plugin-Budget_Table/7169ab9732b5c3c1dd8eec49b46abb208f4496de/docs/screenshot.png"
     },
     {
@@ -118,7 +118,7 @@
       "icon": "Compass",
       "reviewedAt": "2026-08-08",
       "boundOwner": "raduwolf12",
-      "downloadCount": 289,
+      "downloadCount": 297,
       "screenshotUrl": "https://raw.githubusercontent.com/raduwolf12/featured-guides/7949c92d7fc5340ce9b866b34126f5b1a1cc3323/docs/screenshot.png"
     },
     {
@@ -162,7 +162,7 @@
       "authorPublicKey": "DJDfduAyHs2Ja/xhOyMkbCAcreMZZyKuz70PqTyfYM0=",
       "reviewedAt": "2026-07-19",
       "boundOwner": "fbnlrz",
-      "downloadCount": 783,
+      "downloadCount": 792,
       "screenshotUrl": "https://raw.githubusercontent.com/fbnlrz/trek-track/6e31aaa56abedc590e2e6bc113ea722b737b529b/docs/screenshot.png"
     },
     {
@@ -211,7 +211,7 @@
       ],
       "reviewedAt": "2026-07-18",
       "boundOwner": "mauriceboe",
-      "downloadCount": 366,
+      "downloadCount": 368,
       "screenshotUrl": "https://raw.githubusercontent.com/mauriceboe/trek-plugin-koffi/fedcf81d2fc13a331fdfa49662fcbef9c3d51fb8/docs/screenshot.png"
     },
     {
@@ -240,7 +240,7 @@
       "homepage": "https://github.com/fbnlrz/nihongo-nugget",
       "reviewedAt": "2026-07-18",
       "boundOwner": "fbnlrz",
-      "downloadCount": 112,
+      "downloadCount": 113,
       "screenshotUrl": "https://raw.githubusercontent.com/fbnlrz/nihongo-nugget/0eac0fc6c7b3dc2e608ae54b397fd6f504fdbe51/docs/screenshot.png"
     },
     {
@@ -269,7 +269,7 @@
       "authorPublicKey": "ydD/02TVm0yR4mkvmsUmstBO+PJLzl1Wkei2EDbkSeM=",
       "reviewedAt": "2026-07-18",
       "boundOwner": "geracobo",
-      "downloadCount": 430,
+      "downloadCount": 439,
       "screenshotUrl": "https://raw.githubusercontent.com/geracobo/trek-plugin-reservations/86133d7a61b7b63dc51aafd2aeb85d1257e1df70/docs/screenshot.png"
     },
     {
@@ -416,7 +416,7 @@
       "homepage": "https://github.com/fbnlrz/trek-x-japan",
       "reviewedAt": "2026-07-18",
       "boundOwner": "fbnlrz",
-      "downloadCount": 280,
+      "downloadCount": 282,
       "screenshotUrl": "https://raw.githubusercontent.com/fbnlrz/trek-x-japan/df8c977e42b1bad85f4afae78820490f64f05f77/docs/screenshot.png"
     },
     {
@@ -511,7 +511,7 @@
       "icon": "Images",
       "reviewedAt": "2026-07-29",
       "boundOwner": "raduwolf12",
-      "downloadCount": 78,
+      "downloadCount": 80,
       "screenshotUrl": "https://raw.githubusercontent.com/raduwolf12/trip-gallery/ad09889d92540a4a46697f66d65995e7bc5bdbed/docs/screenshot.png"
     },
     {
@@ -562,7 +562,7 @@
       "icon": "PackageOpen",
       "reviewedAt": "2026-08-13",
       "boundOwner": "raduwolf12",
-      "downloadCount": 170,
+      "downloadCount": 182,
       "screenshotUrl": "https://raw.githubusercontent.com/raduwolf12/trip-importer/ff8e6419b641d0dc8241742b06c81d827025c0b1/docs/screenshot.png"
     },
     {
@@ -602,7 +602,7 @@
       "homepage": "https://github.com/raduwolf12/trip-research",
       "reviewedAt": "2026-07-25",
       "boundOwner": "raduwolf12",
-      "downloadCount": 417,
+      "downloadCount": 423,
       "screenshotUrl": "https://raw.githubusercontent.com/raduwolf12/trip-research/7019442450aeb9bc59e87d8ca279cb7eb6ffb984/docs/screenshot.png"
     },
     {
@@ -650,7 +650,7 @@
       "authorPublicKey": "DupqG0Rp0DxlJRRSxAnFpw6I5v/w5iu7fREFh3Ss5hg=",
       "reviewedAt": "2026-08-01",
       "boundOwner": "RenzoBeux",
-      "downloadCount": 140,
+      "downloadCount": 144,
       "screenshotUrl": "https://raw.githubusercontent.com/RenzoBeux/TREK-trip-segments/f21a9473ac54397abd199f19742e80032891adce/docs/screenshot.png"
     },
     {
@@ -681,7 +681,7 @@
       "authorPublicKey": "4QeCOm8gMfcoZdjIznao2KV10NSS7u/0AYn+6FA6/Oo=",
       "reviewedAt": "2026-07-18",
       "boundOwner": "mauriceboe",
-      "downloadCount": 499,
+      "downloadCount": 505,
       "screenshotUrl": "https://raw.githubusercontent.com/mauriceboe/trek-plugin-trip-todos/d2864dded856ffc721ea95a3e42e02ef256ecf5e/docs/screenshot.png"
     },
     {
@@ -722,7 +722,7 @@
       "homepage": "https://github.com/raduwolf12/wiki-place-context",
       "reviewedAt": "2026-07-20",
       "boundOwner": "raduwolf12",
-      "downloadCount": 627,
+      "downloadCount": 637,
       "screenshotUrl": "https://raw.githubusercontent.com/raduwolf12/wiki-place-context/5b01ea7791e2587205c49e009c27970653e327d5/docs/screenshot.png"
     }
   ]
