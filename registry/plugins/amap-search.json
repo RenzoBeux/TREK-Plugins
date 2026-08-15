@@ -2,10 +2,29 @@
   "id": "amap-search",
   "name": "高德搜索",
   "author": "imusic-487",
-  "description": "在 TREK 里直接搜遍高德地图——餐厅、景点、宝藏小店都能找，一键复制详情或添加进当前行程，坐标/地图链接/电话自动带上。Search Amap POIs inside TREK & add them to your trip in one click.",
+  "description": "在 TREK 里直接搜遍高德地图——餐厅、景点、宝藏小店都能找。装完打开任意行程，顶部出现「找地方」tab；填一个免费高德 Key 即可搜索，一键复制详情或添加进当前行程，坐标/地图链接/电话自动带上。Search Amap POIs right inside TREK: after install, open any trip and a 'Find Places' tab appears; add a free Amap Web API key, then copy details or add to your trip in one click.",
   "repo": "imusic-487/Trek-Amap-search",
   "type": "trip-page",
+  "tags": [
+    "amap",
+    "china",
+    "places",
+    "poi",
+    "search"
+  ],
   "versions": [
+    {
+      "version": "1.3.27",
+      "gitTag": "v1.3.27",
+      "commitSha": "4fe9c0b1c28f295524c2a16f3f9dc6532b3f7f0d",
+      "downloadUrl": "https://github.com/imusic-487/Trek-Amap-search/releases/download/v1.3.27/plugin.zip",
+      "sha256": "d5f68b2f9b6d504e103ae4c801cbc24ef41c9b61ab97beca5e6eba92bc7b8a23",
+      "trek": ">=3.4.0 <4.0.0",
+      "size": 39086,
+      "apiVersion": 1,
+      "nativeModules": false,
+      "publishedAt": "2026-08-15T11:21:00.000Z"
+    },
     {
       "version": "1.3.26",
       "gitTag": "v1.3.26",
