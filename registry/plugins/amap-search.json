@@ -1,11 +1,66 @@
 {
   "id": "amap-search",
-  "name": "高德搜索",
+  "name": "找地方",
   "author": "imusic-487",
-  "description": "在 TREK 里直接搜索高德 POI，一键复制地址或添加进当前行程（自动带坐标/地图链接/电话）。",
+  "description": "在 TREK 里直接搜遍高德地图——餐厅、景点、宝藏小店都能找。装完打开任意行程，顶部「找地方」tab 即用；填免费高德 Key，一键复制或添加进当前行程，坐标/地图链接/电话自动带上。Search & add Amap POIs in TREK.",
   "repo": "imusic-487/Trek-Amap-search",
   "type": "trip-page",
+  "tags": [
+    "amap",
+    "china",
+    "places",
+    "poi",
+    "search"
+  ],
   "versions": [
+    {
+      "version": "1.3.29",
+      "gitTag": "v1.3.29",
+      "commitSha": "027681863ee1a3d62a2efa3d261d614d7b20d181",
+      "downloadUrl": "https://github.com/imusic-487/Trek-Amap-search/releases/download/v1.3.29/plugin.zip",
+      "sha256": "58f3ba4e1b67aeeb5441e1afbec57a6fcef151be2dc12ad3427bc5034759e6f2",
+      "trek": ">=3.4.0 <4.0.0",
+      "size": 39577,
+      "apiVersion": 1,
+      "nativeModules": false,
+      "publishedAt": "2026-08-15T17:30:00.000Z"
+    },
+    {
+      "version": "1.3.28",
+      "gitTag": "v1.3.28",
+      "commitSha": "fc544fb78a26abc464b9781b1b4e03b4400b8d47",
+      "downloadUrl": "https://github.com/imusic-487/Trek-Amap-search/releases/download/v1.3.28/plugin.zip",
+      "sha256": "507c62e089b6938b4debf3fcafc20a754df8d57d39d7828a19b1f12be1753474",
+      "trek": ">=3.4.0 <4.0.0",
+      "size": 39225,
+      "apiVersion": 1,
+      "nativeModules": false,
+      "publishedAt": "2026-08-15T16:21:00.000Z"
+    },
+    {
+      "version": "1.3.27",
+      "gitTag": "v1.3.27",
+      "commitSha": "4fe9c0b1105e1e7066b55339f5d48eeb290e1074",
+      "downloadUrl": "https://github.com/imusic-487/Trek-Amap-search/releases/download/v1.3.27/plugin.zip",
+      "sha256": "d5f68b2f9b6d504e103ae4c801cbc24ef41c9b61ab97beca5e6eba92bc7b8a23",
+      "trek": ">=3.4.0 <4.0.0",
+      "size": 39086,
+      "apiVersion": 1,
+      "nativeModules": false,
+      "publishedAt": "2026-08-15T11:21:00.000Z"
+    },
+    {
+      "version": "1.3.26",
+      "gitTag": "v1.3.26",
+      "commitSha": "31def8ccd4d3676822b62c03a06c57b7969df1fa",
+      "downloadUrl": "https://github.com/imusic-487/Trek-Amap-search/releases/download/v1.3.26/plugin.zip",
+      "sha256": "bc291fc22b6c1b1ae219d254565d360545ffdeadd2b720bd22245c2ef03ae09f",
+      "trek": ">=3.4.0 <4.0.0",
+      "size": 36747,
+      "apiVersion": 1,
+      "nativeModules": false,
+      "publishedAt": "2026-08-14T10:16:00.000Z"
+    },
     {
       "version": "1.1.9",
       "gitTag": "v1.1.9",
@@ -32,5 +87,6 @@
     }
   ],
   "reviewedAt": "2026-08-12",
-  "boundOwner": "imusic-487"
+  "boundOwner": "imusic-487",
+  "icon": "Search"
 }
