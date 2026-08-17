@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-17T11:19:31.558Z",
+  "generatedAt": "2026-08-17T11:20:58.479Z",
   "plugins": [
     {
       "id": "amap-search",
@@ -135,6 +135,18 @@
       "type": "page",
       "versions": [
         {
+          "version": "2.0.0",
+          "gitTag": "v2.0.0",
+          "commitSha": "99e83f622c7d41f3666de868afecb2ec07cf5c45",
+          "downloadUrl": "https://github.com/raduwolf12/featured-guides/releases/download/v2.0.0/plugin.zip",
+          "sha256": "5d3cb69958600ae93a77e3c87d8f29bd70c79949cd7e257288c138a0a035eb32",
+          "trek": ">=3.4.0 <4.0.0",
+          "size": 904187,
+          "apiVersion": 1,
+          "nativeModules": false,
+          "publishedAt": "2026-08-16T10:41:28.333Z"
+        },
+        {
           "version": "1.4.0",
           "gitTag": "v1.4.0",
           "commitSha": "7949c92d7fc5340ce9b866b34126f5b1a1cc3323",
@@ -172,10 +184,10 @@
         }
       ],
       "icon": "Compass",
-      "reviewedAt": "2026-08-08",
+      "reviewedAt": "2026-08-17",
       "boundOwner": "raduwolf12",
       "downloadCount": 327,
-      "screenshotUrl": "https://raw.githubusercontent.com/raduwolf12/featured-guides/7949c92d7fc5340ce9b866b34126f5b1a1cc3323/docs/screenshot.png"
+      "screenshotUrl": "https://raw.githubusercontent.com/raduwolf12/featured-guides/99e83f622c7d41f3666de868afecb2ec07cf5c45/docs/screenshot.png"
     },
     {
       "id": "flight-tracker",
