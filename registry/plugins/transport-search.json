@@ -1,0 +1,24 @@
+{
+  "id": "transport-search",
+  "name": "Transport Search",
+  "author": "self-hosted",
+  "description": "Search buses, trains, flights and transfers between any two places via Traveling.com. Browse results, filter by transport type, and open booking links.",
+  "repo": "raduwolf12/transport-search",
+  "type": "trip-page",
+  "versions": [
+    {
+      "version": "1.7.2",
+      "gitTag": "v1.7.2",
+      "commitSha": "94205fc109e74943dc562f2667f9a405ae02cad5",
+      "downloadUrl": "https://github.com/raduwolf12/transport-search/releases/download/v1.7.2/plugin.zip",
+      "sha256": "b9685391aa2f4c76a823e8fdb3390150f0378fe451ad2c188c66fe30dbc6b5fe",
+      "trek": ">=3.3.0 <4.1.0",
+      "size": 40763,
+      "apiVersion": 1,
+      "nativeModules": false,
+      "publishedAt": "2026-08-18T15:49:34.211Z",
+      "operatorEgress": true
+    }
+  ],
+  "icon": "Search"
+}
