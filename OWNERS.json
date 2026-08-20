@@ -95,6 +95,11 @@
       "boundOwner": "raduwolf12",
       "repo": "raduwolf12/community-trips",
       "firstReviewedAt": "2026-08-17"
+    },
+    "transport-search": {
+      "boundOwner": "raduwolf12",
+      "repo": "raduwolf12/transport-search",
+      "firstReviewedAt": "2026-08-20"
     }
   }
 }

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-20T04:01:53.207Z",
+  "generatedAt": "2026-08-20T07:03:50.543Z",
   "plugins": [
     {
       "id": "amap-search",
@@ -135,6 +135,19 @@
       "type": "page",
       "versions": [
         {
+          "version": "1.0.1",
+          "gitTag": "v1.0.1",
+          "commitSha": "f3c9947eb3413197c22f7832cd69dd4281766c6d",
+          "downloadUrl": "https://github.com/raduwolf12/community-trips/releases/download/v1.0.1/plugin.zip",
+          "sha256": "e37c94f38f02ce243a371308b3d315f13ebdbb9b9de6fc96dbc555eca49b078d",
+          "trek": ">=3.4.0 <4.1.0",
+          "size": 88272,
+          "apiVersion": 1,
+          "nativeModules": false,
+          "publishedAt": "2026-08-18T15:49:32.480Z",
+          "signature": "/1acY6H/KGvggr3eMlPLbwJikJ5lgCAz76jyqrNuf2+WlSxkQerYJJBPuyx3kaD0qhXhQN+CpF46p9d31QAwBw=="
+        },
+        {
           "version": "1.0.0",
           "gitTag": "v1.0.0",
           "commitSha": "95a6db3660dde768907d6f837eeb20f5ed16fe5f",
@@ -150,10 +163,10 @@
       ],
       "icon": "Users",
       "authorPublicKey": "uMHwp7oHtdz7DIpkW4H0yZFMuyAxmVajzKh4079jiwA=",
-      "reviewedAt": "2026-08-17",
+      "reviewedAt": "2026-08-20",
       "boundOwner": "raduwolf12",
       "downloadCount": 22,
-      "screenshotUrl": "https://raw.githubusercontent.com/raduwolf12/community-trips/95a6db3660dde768907d6f837eeb20f5ed16fe5f/docs/screenshot.png"
+      "screenshotUrl": "https://raw.githubusercontent.com/raduwolf12/community-trips/f3c9947eb3413197c22f7832cd69dd4281766c6d/docs/screenshot.png"
     },
     {
       "id": "featured-guides",
@@ -163,6 +176,18 @@
       "repo": "raduwolf12/featured-guides",
       "type": "page",
       "versions": [
+        {
+          "version": "2.0.1",
+          "gitTag": "v2.0.1",
+          "commitSha": "51e9c6e0db31b759e97cd41e15cbbfeff48f50b1",
+          "downloadUrl": "https://github.com/raduwolf12/featured-guides/releases/download/v2.0.1/plugin.zip",
+          "sha256": "4a66864d63bd5a042cd54150485780077c522925cfbe80bd70e87c970b4b718c",
+          "trek": ">=3.4.0 <4.1.0",
+          "size": 904189,
+          "apiVersion": 1,
+          "nativeModules": false,
+          "publishedAt": "2026-08-18T15:49:30.666Z"
+        },
         {
           "version": "2.0.0",
           "gitTag": "v2.0.0",
@@ -213,10 +238,10 @@
         }
       ],
       "icon": "Compass",
-      "reviewedAt": "2026-08-17",
+      "reviewedAt": "2026-08-20",
       "boundOwner": "raduwolf12",
       "downloadCount": 370,
-      "screenshotUrl": "https://raw.githubusercontent.com/raduwolf12/featured-guides/99e83f622c7d41f3666de868afecb2ec07cf5c45/docs/screenshot.png"
+      "screenshotUrl": "https://raw.githubusercontent.com/raduwolf12/featured-guides/51e9c6e0db31b759e97cd41e15cbbfeff48f50b1/docs/screenshot.png"
     },
     {
       "id": "flight-tracker",
@@ -399,6 +424,33 @@
       "boundOwner": "fbnlrz",
       "downloadCount": 98,
       "screenshotUrl": "https://raw.githubusercontent.com/fbnlrz/suica-saver/e7c4fc1f7dfcf3ebe447b5a9544e75e7b5831ce7/docs/screenshot.png"
+    },
+    {
+      "id": "transport-search",
+      "name": "Transport Search",
+      "author": "self-hosted",
+      "description": "Search buses, trains, flights and transfers between any two places via Traveling.com. Browse results, filter by transport type, and open booking links.",
+      "repo": "raduwolf12/transport-search",
+      "type": "trip-page",
+      "versions": [
+        {
+          "version": "1.7.2",
+          "gitTag": "v1.7.2",
+          "commitSha": "94205fc109e74943dc562f2667f9a405ae02cad5",
+          "downloadUrl": "https://github.com/raduwolf12/transport-search/releases/download/v1.7.2/plugin.zip",
+          "sha256": "b9685391aa2f4c76a823e8fdb3390150f0378fe451ad2c188c66fe30dbc6b5fe",
+          "trek": ">=3.3.0 <4.1.0",
+          "size": 40763,
+          "apiVersion": 1,
+          "nativeModules": false,
+          "publishedAt": "2026-08-18T15:49:34.211Z",
+          "operatorEgress": true
+        }
+      ],
+      "icon": "Search",
+      "reviewedAt": "2026-08-20",
+      "boundOwner": "raduwolf12",
+      "screenshotUrl": "https://raw.githubusercontent.com/raduwolf12/transport-search/94205fc109e74943dc562f2667f9a405ae02cad5/docs/screenshot.png"
     },
     {
       "id": "trek-gotify",
@@ -593,6 +645,18 @@
       "type": "trip-page",
       "versions": [
         {
+          "version": "1.0.1",
+          "gitTag": "v1.0.1",
+          "commitSha": "e5281a07a3c3a149e43ab4a8e34ba6ee6be6271e",
+          "downloadUrl": "https://github.com/raduwolf12/trip-gallery/releases/download/v1.0.1/plugin.zip",
+          "sha256": "2b8e690f59756dd5abb26e7a3c63128ce90ebfd3e69e34e9ee1cb2dbc8e47750",
+          "trek": ">=3.4.0 <4.1.0",
+          "size": 358749,
+          "apiVersion": 1,
+          "nativeModules": false,
+          "publishedAt": "2026-08-18T15:49:28.978Z"
+        },
+        {
           "version": "1.0.0",
           "gitTag": "v1.0.0",
           "commitSha": "ad09889d92540a4a46697f66d65995e7bc5bdbed",
@@ -606,10 +670,10 @@
         }
       ],
       "icon": "Images",
-      "reviewedAt": "2026-07-29",
+      "reviewedAt": "2026-08-20",
       "boundOwner": "raduwolf12",
       "downloadCount": 101,
-      "screenshotUrl": "https://raw.githubusercontent.com/raduwolf12/trip-gallery/ad09889d92540a4a46697f66d65995e7bc5bdbed/docs/screenshot.png"
+      "screenshotUrl": "https://raw.githubusercontent.com/raduwolf12/trip-gallery/e5281a07a3c3a149e43ab4a8e34ba6ee6be6271e/docs/screenshot.png"
     },
     {
       "id": "trip-importer",
@@ -619,6 +683,18 @@
       "repo": "raduwolf12/trip-importer",
       "type": "page",
       "versions": [
+        {
+          "version": "1.3.2",
+          "gitTag": "v1.3.2",
+          "commitSha": "d3fe7d1288e0bd1448ffc18a6a68156a9fe169cb",
+          "downloadUrl": "https://github.com/raduwolf12/trip-importer/releases/download/v1.3.2/plugin.zip",
+          "sha256": "32ae5b84b56ce4e2f0ff505833ed56786ba24cece767fa92ad746f06ed8f6e96",
+          "trek": ">=3.4.0 <4.1.0",
+          "size": 540484,
+          "apiVersion": 1,
+          "nativeModules": false,
+          "publishedAt": "2026-08-18T15:49:27.329Z"
+        },
         {
           "version": "1.3.1",
           "gitTag": "v1.3.1",
@@ -681,10 +757,10 @@
         }
       ],
       "icon": "PackageOpen",
-      "reviewedAt": "2026-08-17",
+      "reviewedAt": "2026-08-20",
       "boundOwner": "raduwolf12",
       "downloadCount": 244,
-      "screenshotUrl": "https://raw.githubusercontent.com/raduwolf12/trip-importer/e02f0710a66fd2c707c2e0fedd1a27a95b94add9/docs/screenshot.png"
+      "screenshotUrl": "https://raw.githubusercontent.com/raduwolf12/trip-importer/d3fe7d1288e0bd1448ffc18a6a68156a9fe169cb/docs/screenshot.png"
     },
     {
       "id": "trip-research",
@@ -694,6 +770,18 @@
       "repo": "raduwolf12/trip-research",
       "type": "trip-page",
       "versions": [
+        {
+          "version": "1.1.1",
+          "gitTag": "v1.1.1",
+          "commitSha": "2b1bcad9d2790daf9cc55c4c534ead568b29f33b",
+          "downloadUrl": "https://github.com/raduwolf12/trip-research/releases/download/v1.1.1/plugin.zip",
+          "sha256": "eabc0d35018560027f7816d069f4cbbb13152f90824a65f65659630aa5fae476",
+          "trek": ">=3.3.0 <4.1.0",
+          "size": 75103,
+          "apiVersion": 1,
+          "nativeModules": false,
+          "publishedAt": "2026-08-18T15:49:25.596Z"
+        },
         {
           "version": "1.1.0",
           "gitTag": "v1.1.0",
@@ -721,10 +809,10 @@
       ],
       "icon": "Globe",
       "homepage": "https://github.com/raduwolf12/trip-research",
-      "reviewedAt": "2026-07-25",
+      "reviewedAt": "2026-08-20",
       "boundOwner": "raduwolf12",
       "downloadCount": 474,
-      "screenshotUrl": "https://raw.githubusercontent.com/raduwolf12/trip-research/7019442450aeb9bc59e87d8ca279cb7eb6ffb984/docs/screenshot.png"
+      "screenshotUrl": "https://raw.githubusercontent.com/raduwolf12/trip-research/2b1bcad9d2790daf9cc55c4c534ead568b29f33b/docs/screenshot.png"
     },
     {
       "id": "trip-segments",
@@ -815,6 +903,18 @@
       "icon": "BookOpen",
       "versions": [
         {
+          "version": "1.1.1",
+          "gitTag": "v1.1.1",
+          "commitSha": "aa1c0cf1c764de49d42bf8946234beed545d925c",
+          "downloadUrl": "https://github.com/raduwolf12/wiki-place-context/releases/download/v1.1.1/plugin.zip",
+          "sha256": "5592fb4bb82e46427ce4497413e56e5b82742ce375fb83c220caf1fb90a4464d",
+          "trek": ">=3.3.0 <4.1.0",
+          "size": 18437,
+          "apiVersion": 1,
+          "nativeModules": false,
+          "publishedAt": "2026-08-18T15:49:24.117Z"
+        },
+        {
           "version": "1.1.0",
           "gitTag": "v1.1.0",
           "commitSha": "5b01ea7791e2587205c49e009c27970653e327d5",
@@ -841,10 +941,10 @@
         }
       ],
       "homepage": "https://github.com/raduwolf12/wiki-place-context",
-      "reviewedAt": "2026-07-20",
+      "reviewedAt": "2026-08-20",
       "boundOwner": "raduwolf12",
       "downloadCount": 678,
-      "screenshotUrl": "https://raw.githubusercontent.com/raduwolf12/wiki-place-context/5b01ea7791e2587205c49e009c27970653e327d5/docs/screenshot.png"
+      "screenshotUrl": "https://raw.githubusercontent.com/raduwolf12/wiki-place-context/aa1c0cf1c764de49d42bf8946234beed545d925c/docs/screenshot.png"
     }
   ]
 }

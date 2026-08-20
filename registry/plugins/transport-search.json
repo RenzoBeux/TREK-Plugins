@@ -20,5 +20,7 @@
       "operatorEgress": true
     }
   ],
-  "icon": "Search"
+  "icon": "Search",
+  "reviewedAt": "2026-08-20",
+  "boundOwner": "raduwolf12"
 }
