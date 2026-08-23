@@ -8,7 +8,8 @@
     "aggregate": "node build/aggregate.mjs",
     "validate:entry": "node scripts/validate-entry.mjs",
     "check:readme": "node scripts/check-readme.mjs",
-    "test:gates": "node scripts/selftest-gates.mjs"
+    "test:gates": "node scripts/selftest-gates.mjs",
+    "notify:major": "node scripts/notify-major-upgrade.mjs"
   },
   "dependencies": {
     "ajv": "^8.20.0",
