@@ -19,6 +19,7 @@ import { fileURLToPath } from 'node:url'
 import Ajv2020 from 'ajv/dist/2020.js'
 import addFormats from 'ajv-formats'
 import { satisfiableRange, trekFloor } from './lib/trek-range.mjs'
+import { permissionProblems } from './validate-entry.mjs'
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 
@@ -385,6 +386,32 @@ expect('a well-formed signed entry passes', runGate(baseEntry()), true)
     expect(`trekFloor(${JSON.stringify(range)}) === ${JSON.stringify(want)}`, { ok: trekFloor(range) === want, out: String(trekFloor(range)) }, true)
   }
   expect('satisfiableRange rejects an empty range', { ok: !satisfiableRange('>=4.0.0 <3.0.0'), out: '' }, true)
+}
+
+// --- permission allowlist (permissionProblems, pure) ---
+//
+// TREK's installer only knows the permission ids in shared/src/plugin-permissions.ts (vendored
+// into scripts/lib/known-permissions.mjs) plus scoped http:outbound:<host> permissions whose
+// host matches the same HOST_RE the installer itself uses. An id outside that set is either a
+// typo (the plugin silently loses the capability at install) or a host TREK would refuse — this
+// runs offline against the network section's helper directly, the way trekFloor/satisfiableRange
+// are exercised above, since SKIP_NETWORK never reaches the manifest-parity block that calls it.
+{
+  const cases = [
+    [['db:read:trip'], ['unknown permission(s): db:read:trip']],
+    [['db:read:trips', 'http:outbound'], []],
+    [['http:outbound:api.example.com'], []],
+    [['http:outbound:*'], ['unknown permission(s): http:outbound:*']],
+    [['http:outbound:*.example.com'], []],
+  ]
+  for (const [perms, want] of cases) {
+    const got = permissionProblems(perms)
+    expect(
+      `permissionProblems(${JSON.stringify(perms)}) === ${JSON.stringify(want)}`,
+      { ok: JSON.stringify(got) === JSON.stringify(want), out: JSON.stringify(got) },
+      true,
+    )
+  }
 }
 
 // --- downloadCount: computed, never submitted ---
