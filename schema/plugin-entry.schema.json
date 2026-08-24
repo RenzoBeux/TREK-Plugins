@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/mauriceboe/TREK-Plugins/schema/plugin-entry.schema.json",
+  "$id": "https://github.com/liketrek/TREK-Plugins/schema/plugin-entry.schema.json",
   "title": "TREK plugin registry entry",
   "description": "One registry/plugins/<id>.json file. reviewedAt and boundOwner are maintained by CI/publish and may be omitted by submitters. Submissions are strict: no fields beyond $defs/entry. The published dist/index.json additionally carries a CI-computed downloadCount per entry — that shape is described by registry.schema.json, never by a submission.",
   "$ref": "#/$defs/entry",

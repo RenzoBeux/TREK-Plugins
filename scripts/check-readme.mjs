@@ -76,10 +76,10 @@ try {
   const r = await fetch(RAW('docs/screenshot.png'), { method: 'GET', headers: { Range: 'bytes=0-2047' } })
   const ct = r.headers.get('content-type') || ''
   if (!r.ok || !ct.startsWith('image/')) {
-    note(`docs/screenshot.png does not resolve to an image at ${commitSha.slice(0, 8)} (got ${r.status} ${ct || 'no content-type'}). This exact file is the store cover — run \`npx trek-plugin shot\` to generate it, commit it, and re-pin the entry to that commit.`)
+    note(`docs/screenshot.png does not resolve to an image at ${commitSha.slice(0, 8)} (got ${r.status} ${ct || 'no content-type'}). This exact file is the store cover — run \`npx trek-plugin-sdk shot\` to generate it, commit it, and re-pin the entry to that commit.`)
   }
 } catch {
-  note(`docs/screenshot.png is unreachable at ${commitSha.slice(0, 8)}. This exact file is the store cover — run \`npx trek-plugin shot\` to generate it and commit it.`)
+  note(`docs/screenshot.png is unreachable at ${commitSha.slice(0, 8)}. This exact file is the store cover — run \`npx trek-plugin-sdk shot\` to generate it and commit it.`)
 }
 
 // 6. Permission parity — every manifest permission must be mentioned in the README
