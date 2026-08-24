@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-24T17:40:24.538Z",
+  "generatedAt": "2026-08-24T17:41:07.837Z",
   "plugins": [
     {
       "id": "amap-search",
@@ -813,6 +813,18 @@
       "type": "trip-page",
       "versions": [
         {
+          "version": "1.2.1",
+          "gitTag": "v1.2.1",
+          "commitSha": "58f67a17cdfa1263c88ca9389baa26367ebc6425",
+          "downloadUrl": "https://github.com/raduwolf12/trip-research/releases/download/v1.2.1/plugin.zip",
+          "sha256": "ff6566aa0d30455a7f42aee9aa1d429bd35f7ffea7ffe7a354b19294aef36bcb",
+          "trek": ">=3.3.0 <5.0.0",
+          "size": 92711,
+          "apiVersion": 1,
+          "nativeModules": false,
+          "publishedAt": "2026-08-24T15:05:45.257Z"
+        },
+        {
           "version": "1.2.0",
           "gitTag": "v1.2.0",
           "commitSha": "fad510dc59007b733680ca167ccf132eb651d16d",
@@ -863,10 +875,10 @@
       ],
       "icon": "Globe",
       "homepage": "https://github.com/raduwolf12/trip-research",
-      "reviewedAt": "2026-08-22",
+      "reviewedAt": "2026-08-24",
       "boundOwner": "raduwolf12",
       "downloadCount": 565,
-      "screenshotUrl": "https://raw.githubusercontent.com/raduwolf12/trip-research/fad510dc59007b733680ca167ccf132eb651d16d/docs/screenshot.png"
+      "screenshotUrl": "https://raw.githubusercontent.com/raduwolf12/trip-research/58f67a17cdfa1263c88ca9389baa26367ebc6425/docs/screenshot.png"
     },
     {
       "id": "trip-segments",
