@@ -16,8 +16,7 @@
       "size": 358749,
       "apiVersion": 1,
       "nativeModules": false,
-      "publishedAt": "2026-08-24T15:03:27.759Z",
-      "signature": "cRiU1dqlpzbPprVXc80Zxb1nAP/+CUi3TO9OPUI6ICCGiU0PcWycJn45MimUr1S4Sa/OPWzeFRJNElMq8uXtCw=="
+      "publishedAt": "2026-08-24T15:03:27.759Z"
     },
     {
       "version": "1.0.1",
@@ -46,6 +45,5 @@
   ],
   "icon": "Images",
   "reviewedAt": "2026-08-20",
-  "boundOwner": "raduwolf12",
-  "authorPublicKey": "uMHwp7oHtdz7DIpkW4H0yZFMuyAxmVajzKh4079jiwA="
+  "boundOwner": "raduwolf12"
 }
