@@ -8,6 +8,18 @@
   "icon": "BookOpen",
   "versions": [
     {
+      "version": "1.1.2",
+      "gitTag": "v1.1.2",
+      "commitSha": "c4bf09730c3476b467338245319ecb7e22eb575e",
+      "downloadUrl": "https://github.com/raduwolf12/wiki-place-context/releases/download/v1.1.2/plugin.zip",
+      "sha256": "81e7877ab2840a8a6fbe7102d549d749dc027efe4beca660791b85539551a7f7",
+      "trek": ">=3.3.0 <5.0.0",
+      "size": 18437,
+      "apiVersion": 1,
+      "nativeModules": false,
+      "publishedAt": "2026-08-24T15:12:53.675Z"
+    },
+    {
       "version": "1.1.1",
       "gitTag": "v1.1.1",
       "commitSha": "aa1c0cf1c764de49d42bf8946234beed545d925c",
