@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-24T18:02:41.237Z",
+  "generatedAt": "2026-08-24T18:14:40.535Z",
   "plugins": [
     {
       "id": "amap-search",
@@ -105,6 +105,22 @@
       "type": "trip-page",
       "versions": [
         {
+          "version": "1.0.1",
+          "gitTag": "v1.0.1",
+          "commitSha": "dae7696f71fea512dbf2c11be5bc066c3917c0e1",
+          "downloadUrl": "https://github.com/jubnl/Trek_Plugin-Budget_Table/releases/download/v1.0.1/plugin.zip",
+          "sha256": "9420f953aa43128f863019bb07b96f344a82fe134a21f8f867d43b61bc205f04",
+          "trek": ">=3.2.1 <5.0.0",
+          "size": 25999,
+          "apiVersion": 1,
+          "nativeModules": false,
+          "publishedAt": "2026-08-24T18:09:47.019Z",
+          "requiredAddons": [
+            "budget"
+          ],
+          "signature": "eOYDsS6rLrHxoolMq6UU9AyTvV1QMd0a2Nb/N40Q+7HOj0XYCc/JaYoF3JTH9hSmPKZqQED/MJgC99dz9jHmDA=="
+        },
+        {
           "version": "1.0.0",
           "gitTag": "v1.0.0",
           "commitSha": "7169ab9732b5c3c1dd8eec49b46abb208f4496de",
@@ -118,13 +134,15 @@
           "publishedAt": "2026-07-06T00:05:35.905Z",
           "requiredAddons": [
             "budget"
-          ]
+          ],
+          "signature": "o45aDIg/CEoNpb3rE5ehAmVi4jvX7mewZtc3J8ofJ4zu2AMDsp/5tEmdwCZctOhE8Oo3dxLq6lkH+XhLcIEWBg=="
         }
       ],
-      "reviewedAt": "2026-07-18",
+      "reviewedAt": "2026-08-24",
       "boundOwner": "jubnl",
+      "authorPublicKey": "YgFVo9ES55xz9m0/0Thh5sgx/IlVaaU2r0hScEawgiA=",
       "downloadCount": 388,
-      "screenshotUrl": "https://raw.githubusercontent.com/jubnl/Trek_Plugin-Budget_Table/7169ab9732b5c3c1dd8eec49b46abb208f4496de/docs/screenshot.png"
+      "screenshotUrl": "https://raw.githubusercontent.com/jubnl/Trek_Plugin-Budget_Table/dae7696f71fea512dbf2c11be5bc066c3917c0e1/docs/screenshot.png"
     },
     {
       "id": "community-trips",
