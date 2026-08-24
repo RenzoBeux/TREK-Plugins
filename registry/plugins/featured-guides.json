@@ -16,8 +16,7 @@
       "size": 904189,
       "apiVersion": 1,
       "nativeModules": false,
-      "publishedAt": "2026-08-24T15:02:59.468Z",
-      "signature": "+RhTiLUaGFiTyPatMpRlIUtiXetHtNwBDY/5V6CQj/Kmp5kv3Kih5Qv+bkk/E4ZGW6rlGtGpJJ/CSh8w6CzRAg=="
+      "publishedAt": "2026-08-24T15:02:59.468Z"
     },
     {
       "version": "2.0.1",
@@ -82,6 +81,5 @@
   ],
   "icon": "Compass",
   "reviewedAt": "2026-08-20",
-  "boundOwner": "raduwolf12",
-  "authorPublicKey": "uMHwp7oHtdz7DIpkW4H0yZFMuyAxmVajzKh4079jiwA="
+  "boundOwner": "raduwolf12"
 }
