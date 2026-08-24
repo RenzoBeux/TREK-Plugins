@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-24T17:42:55.254Z",
+  "generatedAt": "2026-08-24T18:02:41.237Z",
   "plugins": [
     {
       "id": "amap-search",
@@ -501,6 +501,20 @@
       "icon": "Bell",
       "versions": [
         {
+          "version": "1.0.2",
+          "gitTag": "v1.0.2",
+          "commitSha": "203e1599b0c18552ed2605de532ba88f22931406",
+          "downloadUrl": "https://github.com/jubnl/trek-gotify/releases/download/v1.0.2/plugin.zip",
+          "sha256": "8e9075da6fb82ff405c11f63d6c0301db88e6331fb006dcc05d30ae2129ed8af",
+          "trek": ">=3.3.0 <5.0.0",
+          "size": 6761,
+          "apiVersion": 1,
+          "nativeModules": false,
+          "publishedAt": "2026-08-24T18:01:43.411Z",
+          "operatorEgress": true,
+          "signature": "a1EVgQaAnJ8jESqPk3tmQsupbV44K7rDB5y/rpB+MKAtmXenOXqYMLwY7jSBewmMFDSsK5/4nPu6rkD+Xs85Bw=="
+        },
+        {
           "version": "1.0.1",
           "gitTag": "v1.0.1",
           "commitSha": "eeb325ea6b5d1f89bf257e8437319877e3a3fe5d",
@@ -532,10 +546,10 @@
       ],
       "homepage": "https://github.com/jubnl/trek-gotify",
       "authorPublicKey": "YgFVo9ES55xz9m0/0Thh5sgx/IlVaaU2r0hScEawgiA=",
-      "reviewedAt": "2026-07-19",
+      "reviewedAt": "2026-08-24",
       "boundOwner": "jubnl",
       "downloadCount": 101,
-      "screenshotUrl": "https://raw.githubusercontent.com/jubnl/trek-gotify/eeb325ea6b5d1f89bf257e8437319877e3a3fe5d/docs/screenshot.png"
+      "screenshotUrl": "https://raw.githubusercontent.com/jubnl/trek-gotify/203e1599b0c18552ed2605de532ba88f22931406/docs/screenshot.png"
     },
     {
       "id": "trek-vox-plugin",
