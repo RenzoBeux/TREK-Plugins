@@ -240,6 +240,42 @@ expect('a well-formed signed entry passes', runGate(baseEntry()), true)
   expect('an entry whose id merely contains a reserved word ("registryx") passes', runGate(e), true)
 }
 
+// --- versions[] newest-first ordering ---
+//
+// validate.yml and this script both grade versions[0] as the newly published version
+// ("newest-first by convention"); make the convention an invariant so an oldest-first
+// submission can't get the wrong commit graded (isNewlyPublished, the trek-range parity
+// checks, and the README grading in validate.yml all trust versions[0]).
+{
+  const e = baseEntry()
+  e.versions = [
+    { ...e.versions[0], version: '1.2.0', gitTag: 'v1.2.0' },
+    { ...e.versions[0], version: '1.1.0', gitTag: 'v1.1.0' },
+  ]
+  expect('versions[] sorted newest-first (1.2.0 before 1.1.0) passes', runGate(e), true)
+}
+{
+  const e = baseEntry()
+  e.versions = [
+    { ...e.versions[0], version: '1.1.0', gitTag: 'v1.1.0' },
+    { ...e.versions[0], version: '1.2.0', gitTag: 'v1.2.0' },
+  ]
+  expect(
+    'versions[] sorted oldest-first (1.1.0 before 1.2.0) fails',
+    runGate(e),
+    false,
+    'versions[] must be sorted newest-first (found 1.1.0 before 1.2.0)',
+  )
+}
+{
+  const e = baseEntry()
+  e.versions = [
+    { ...e.versions[0], version: '1.2.0-rc.1', gitTag: 'v1.2.0-rc.1' },
+    { ...e.versions[0], version: '1.1.0', gitTag: 'v1.1.0' },
+  ]
+  expect('a pre-release newest-first (1.2.0-rc.1 before 1.1.0) passes', runGate(e), true)
+}
+
 // --- icon ---
 //
 // TREK falls back to Blocks on an icon name lucide doesn't have, so a typo is invisible

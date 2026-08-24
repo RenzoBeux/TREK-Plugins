@@ -20,6 +20,7 @@ import { fileURLToPath } from 'node:url'
 import path from 'node:path'
 import Ajv2020 from 'ajv/dist/2020.js'
 import addFormats from 'ajv-formats'
+import semver from 'semver'
 import { verifyAuthorSignature, checkSignatureShape, SignatureError } from './lib/verify-signature.mjs'
 import { satisfiableRange, trekFloor } from './lib/trek-range.mjs'
 import { LUCIDE_ICON_NAMES } from './lib/lucide-icon-names.mjs'
@@ -52,6 +53,17 @@ if (entry.id && entry.id !== fileId) bad(`id "${entry.id}" must equal filename "
 // ids collide with the install loader's own routes and are refused by every TREK.
 const RESERVED_IDS = new Set(['registry', 'install', 'rescan'])
 if (RESERVED_IDS.has(entry.id)) bad(`"${entry.id}" is a reserved plugin id`)
+
+// --- versions[] newest-first ordering ---
+// validate.yml and this script both grade versions[0] as the newly published
+// version ("newest-first by convention"); make the convention an invariant so an
+// oldest-first submission can't get the wrong commit graded.
+if (Array.isArray(entry.versions)) {
+  for (let i = 1; i < entry.versions.length; i++) {
+    const [a, b] = [entry.versions[i - 1].version, entry.versions[i].version]
+    if (semver.compare(a, b) < 0) bad(`versions[] must be sorted newest-first (found ${a} before ${b})`)
+  }
+}
 
 // --- icon ---
 // TREK resolves `icon` against lucide at render time and falls back to Blocks on a name
