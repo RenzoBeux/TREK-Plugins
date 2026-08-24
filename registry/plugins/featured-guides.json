@@ -7,6 +7,19 @@
   "type": "page",
   "versions": [
     {
+      "version": "2.0.2",
+      "gitTag": "v2.0.2",
+      "commitSha": "9e62adfa878d7a50a2646c3c875e3132f269c7ec",
+      "downloadUrl": "https://github.com/raduwolf12/featured-guides/releases/download/v2.0.2/plugin.zip",
+      "sha256": "603c94eaa960db20dafe29d9a61b8bfa5f57193d148c0b3958cd13f60373cbbd",
+      "trek": ">=3.4.0 <5.0.0",
+      "size": 904189,
+      "apiVersion": 1,
+      "nativeModules": false,
+      "publishedAt": "2026-08-24T15:02:59.468Z",
+      "signature": "+RhTiLUaGFiTyPatMpRlIUtiXetHtNwBDY/5V6CQj/Kmp5kv3Kih5Qv+bkk/E4ZGW6rlGtGpJJ/CSh8w6CzRAg=="
+    },
+    {
       "version": "2.0.1",
       "gitTag": "v2.0.1",
       "commitSha": "51e9c6e0db31b759e97cd41e15cbbfeff48f50b1",
@@ -69,5 +82,6 @@
   ],
   "icon": "Compass",
   "reviewedAt": "2026-08-20",
-  "boundOwner": "raduwolf12"
+  "boundOwner": "raduwolf12",
+  "authorPublicKey": "uMHwp7oHtdz7DIpkW4H0yZFMuyAxmVajzKh4079jiwA="
 }
