@@ -17,8 +17,7 @@
       "apiVersion": 1,
       "nativeModules": false,
       "publishedAt": "2026-08-24T15:05:20.062Z",
-      "operatorEgress": true,
-      "signature": "zPltzjY8VT1DjkvlfDkmQwc5nYTZS8JEComq1sd3Ew4eQ9+71/Ooa2bWywwqQJ/w3CLf0md7QNMWbbHdbD3lCA=="
+      "operatorEgress": true
     },
     {
       "version": "1.4.0",
@@ -108,6 +107,5 @@
   ],
   "icon": "PackageOpen",
   "reviewedAt": "2026-08-20",
-  "boundOwner": "raduwolf12",
-  "authorPublicKey": "uMHwp7oHtdz7DIpkW4H0yZFMuyAxmVajzKh4079jiwA="
+  "boundOwner": "raduwolf12"
 }
