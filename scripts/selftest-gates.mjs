@@ -223,6 +223,23 @@ expect('a well-formed signed entry passes', runGate(baseEntry()), true)
   expect('an entry whose manifest omits apiVersion passes (offline shape)', runGate(e), true)
 }
 
+// --- reserved ids ---
+//
+// The install loader (server/src/nest/plugins/install/manifest.ts: RESERVED_IDS) mounts
+// its own routes at /registry, /install, /rescan — a plugin published under one of those
+// ids would collide and is refused by every TREK. Catch it here so a colliding entry
+// never merges.
+{
+  const e = baseEntry()
+  e.id = 'registry'
+  expect('an entry with a reserved id ("registry") fails', runGate(e), false, '"registry" is a reserved plugin id')
+}
+{
+  const e = baseEntry()
+  e.id = 'registryx'
+  expect('an entry whose id merely contains a reserved word ("registryx") passes', runGate(e), true)
+}
+
 // --- icon ---
 //
 // TREK falls back to Blocks on an icon name lucide doesn't have, so a typo is invisible

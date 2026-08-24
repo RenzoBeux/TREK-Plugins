@@ -47,6 +47,12 @@ if (!validate(entry)) for (const e of validate.errors) bad(`schema: ${e.instance
 const fileId = path.basename(entryPath).replace(/\.json$/, '')
 if (entry.id && entry.id !== fileId) bad(`id "${entry.id}" must equal filename "${fileId}"`)
 
+// --- reserved ids ---
+// Mirrors server/src/nest/plugins/install/manifest.ts:141 (RESERVED_IDS) — these
+// ids collide with the install loader's own routes and are refused by every TREK.
+const RESERVED_IDS = new Set(['registry', 'install', 'rescan'])
+if (RESERVED_IDS.has(entry.id)) bad(`"${entry.id}" is a reserved plugin id`)
+
 // --- icon ---
 // TREK resolves `icon` against lucide at render time and falls back to Blocks on a name
 // it can't find, so a typo is invisible in the store — it just looks like every other
