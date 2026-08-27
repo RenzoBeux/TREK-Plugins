@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-27T21:03:26.846Z",
+  "generatedAt": "2026-08-27T21:09:13.332Z",
   "plugins": [
     {
       "id": "amap-search",
@@ -332,9 +332,9 @@
     },
     {
       "id": "koffi",
-      "name": "Koffi",
+      "name": "Koffi & Friends",
       "author": "TREK",
-      "description": "Koffi, the tiny suitcase mascot, lives on your boarding pass — strolling, rolling, collecting stickers, and getting more excited the closer your trip gets.",
+      "description": "The TREK mascot troupe on your boarding pass: Koffi the suitcase, Chiki the snack, Passi the passport, Puffi the neck pillow. Pick one, or a duo that naps and stamps together.",
       "repo": "mauriceboe/trek-plugin-koffi",
       "homepage": "https://github.com/mauriceboe/trek-plugin-koffi",
       "tags": [
@@ -344,7 +344,21 @@
       ],
       "type": "widget",
       "icon": "Luggage",
+      "authorPublicKey": "4QeCOm8gMfcoZdjIznao2KV10NSS7u/0AYn+6FA6/Oo=",
       "versions": [
+        {
+          "version": "2.0.0",
+          "gitTag": "v2.0.0",
+          "commitSha": "68de9063fb76f0cd5e6a0d855f3eaac04327b941",
+          "downloadUrl": "https://github.com/mauriceboe/trek-plugin-koffi/releases/download/v2.0.0/plugin.zip",
+          "sha256": "1915d08ade998599ed68d3571c2a6317dd9b868cdf728454b0131bea736043d4",
+          "trek": ">=3.5.0",
+          "size": 57289,
+          "apiVersion": 1,
+          "nativeModules": false,
+          "publishedAt": "2026-08-27T20:35:19.783Z",
+          "signature": "E1bJc8dicFstPL7hduwFnPH01gO7I4R6wp9vpx+TYB+dyxGF9aGn90OLFnBBsXtexdjOs0GMIJTO5LmRLIlqDQ=="
+        },
         {
           "version": "1.0.1",
           "gitTag": "v1.0.1",
@@ -357,7 +371,8 @@
           "size": 943257,
           "apiVersion": 1,
           "nativeModules": false,
-          "publishedAt": "2026-07-04T00:00:00Z"
+          "publishedAt": "2026-07-04T00:00:00Z",
+          "signature": "3RFXzYdBrq1hq7gErVrgEhO9LlTaxXHLcrGrMZ/hggQeW5hxIbAmxOzVcmbDGDQL6KhzuvzJsq117QbctmpuAQ=="
         },
         {
           "version": "1.0.0",
@@ -371,13 +386,14 @@
           "size": 215481,
           "apiVersion": 1,
           "nativeModules": false,
-          "publishedAt": "2026-07-03T00:00:00Z"
+          "publishedAt": "2026-07-03T00:00:00Z",
+          "signature": "buuArBwQj3WrLoz1UYIZRl/id4o/KCvqqXZQo7vV+sgfk7yl8MAv7J4IAQLDaiHXTJBnMt7s4bzhnnzqclTNBA=="
         }
       ],
-      "reviewedAt": "2026-07-18",
+      "reviewedAt": "2026-08-27",
       "boundOwner": "mauriceboe",
       "downloadCount": 413,
-      "screenshotUrl": "https://raw.githubusercontent.com/mauriceboe/trek-plugin-koffi/fedcf81d2fc13a331fdfa49662fcbef9c3d51fb8/docs/screenshot.png"
+      "screenshotUrl": "https://raw.githubusercontent.com/mauriceboe/trek-plugin-koffi/68de9063fb76f0cd5e6a0d855f3eaac04327b941/docs/screenshot.png"
     },
     {
       "id": "nihongo-nugget",
