@@ -10,7 +10,7 @@
 - [ ] The newest version is first in the `versions` array.
 - [ ] My manifest declares a `trek` range (e.g. `">=3.2.0 <4.0.0"`) and the entry mirrors it —
       TREK will not install or activate a plugin outside its declared range.
-- [ ] `npx trek-plugin validate` passes locally.
+- [ ] `npx trek-plugin-sdk validate` passes locally.
 - [ ] My repo has a `README.md` (What it does / Screenshots / Permissions / Setup) and a `docs/screenshot.png`.
 - [ ] Every permission my plugin declares is explained in the README.
 

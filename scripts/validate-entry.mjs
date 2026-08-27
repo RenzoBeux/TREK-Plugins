@@ -20,15 +20,46 @@ import { fileURLToPath } from 'node:url'
 import path from 'node:path'
 import Ajv2020 from 'ajv/dist/2020.js'
 import addFormats from 'ajv-formats'
+import semver from 'semver'
 import { verifyAuthorSignature, checkSignatureShape, SignatureError } from './lib/verify-signature.mjs'
 import { satisfiableRange, trekFloor } from './lib/trek-range.mjs'
 import { LUCIDE_ICON_NAMES } from './lib/lucide-icon-names.mjs'
+import { KNOWN_PERMISSIONS, HTTP_OUTBOUND_PREFIX, HOST_RE } from './lib/known-permissions.mjs'
 
 const pexec = promisify(execFile)
+
+/**
+ * Check a manifest's `permissions[]` against TREK's allowlist (scripts/lib/known-permissions.mjs).
+ * A bare `http:outbound` permission is a known id on its own; a scoped
+ * `http:outbound:<host>` permission is accepted only when `<host>` matches HOST_RE — the
+ * same regex TREK's installer uses (server/src/nest/plugins/install/manifest.ts:138), so an
+ * entry can never claim a permission TREK would refuse to install.
+ *
+ * Pure and side-effect free so it can be exercised directly by the selftest.
+ */
+export function permissionProblems(permissions) {
+  const unknown = []
+  for (const p of Array.isArray(permissions) ? permissions : []) {
+    if (KNOWN_PERMISSIONS.has(p)) continue
+    if (p.startsWith(HTTP_OUTBOUND_PREFIX) && HOST_RE.test(p.slice(HTTP_OUTBOUND_PREFIX.length))) continue
+    unknown.push(p)
+  }
+  return unknown.length ? [`unknown permission(s): ${unknown.join(', ')}`] : []
+}
+
+const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
+
+// Everything below is the CLI body — guarded so importing this module (e.g. the selftest,
+// which imports permissionProblems as a pure function) never triggers argv parsing,
+// network calls, or process.exit.
+const isMain = process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)
+if (isMain) await main()
+
+async function main() {
+
 const entryPath = process.argv[2]
 if (!entryPath) { console.error('usage: validate-entry.mjs registry/plugins/<id>.json'); process.exit(2) }
 
-const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const fail = []
 const bad = (m) => fail.push(m)
 
@@ -46,6 +77,23 @@ if (!validate(entry)) for (const e of validate.errors) bad(`schema: ${e.instance
 // --- id === filename ---
 const fileId = path.basename(entryPath).replace(/\.json$/, '')
 if (entry.id && entry.id !== fileId) bad(`id "${entry.id}" must equal filename "${fileId}"`)
+
+// --- reserved ids ---
+// Mirrors server/src/nest/plugins/install/manifest.ts:141 (RESERVED_IDS) — these
+// ids collide with the install loader's own routes and are refused by every TREK.
+const RESERVED_IDS = new Set(['registry', 'install', 'rescan'])
+if (RESERVED_IDS.has(entry.id)) bad(`"${entry.id}" is a reserved plugin id`)
+
+// --- versions[] newest-first ordering ---
+// validate.yml and this script both grade versions[0] as the newly published
+// version ("newest-first by convention"); make the convention an invariant so an
+// oldest-first submission can't get the wrong commit graded.
+if (Array.isArray(entry.versions)) {
+  for (let i = 1; i < entry.versions.length; i++) {
+    const [a, b] = [entry.versions[i - 1].version, entry.versions[i].version]
+    if (semver.compare(a, b) < 0) bad(`versions[] must be sorted newest-first (found ${a} before ${b})`)
+  }
+}
 
 // --- icon ---
 // TREK resolves `icon` against lucide at render time and falls back to Blocks on a name
@@ -256,9 +304,14 @@ if (process.env.SKIP_NETWORK !== '1' && entry.repo && Array.isArray(entry.versio
             bad(`${v.version}: entry minTrekVersion "${v.minTrekVersion}" != the lower bound of trek "${mTrek}" (${floor}) — they must agree, or drop minTrekVersion (deprecated; \`trek\` supersedes it)`)
           }
         }
+        // permission allowlist. A permission id TREK doesn't recognize either can never be
+        // granted (a stale/typo'd id — the plugin silently loses that capability at
+        // install) or, for a scoped http:outbound:<host>, has a host TREK's own installer
+        // would refuse — either way the entry claims something TREK will not honor.
+        const perms = Array.isArray(m.permissions) ? m.permissions : []
+        for (const p of permissionProblems(perms)) bad(`${v.version}: ${p}`)
         // egress presence when http:outbound declared. An empty egress[] is legal ONLY
         // for an operatorEgress plugin, whose hosts an admin supplies after install.
-        const perms = Array.isArray(m.permissions) ? m.permissions : []
         if (perms.some((p) => p === 'http:outbound' || p.startsWith('http:outbound:'))) {
           const egress = Array.isArray(m.egress) ? m.egress : []
           if (!egress.length && m.operatorEgress !== true) {
@@ -343,3 +396,5 @@ if (fail.length) {
   process.exit(1)
 }
 console.log(`Entry validation passed for ${entry.id}.`)
+
+}

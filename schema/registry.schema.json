@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/mauriceboe/TREK-Plugins/schema/registry.schema.json",
+  "$id": "https://github.com/liketrek/TREK-Plugins/schema/registry.schema.json",
   "title": "TREK aggregated registry (dist/index.json)",
   "type": "object",
   "additionalProperties": false,

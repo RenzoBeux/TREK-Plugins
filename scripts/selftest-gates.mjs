@@ -19,6 +19,7 @@ import { fileURLToPath } from 'node:url'
 import Ajv2020 from 'ajv/dist/2020.js'
 import addFormats from 'ajv-formats'
 import { satisfiableRange, trekFloor } from './lib/trek-range.mjs'
+import { permissionProblems } from './validate-entry.mjs'
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 
@@ -223,6 +224,59 @@ expect('a well-formed signed entry passes', runGate(baseEntry()), true)
   expect('an entry whose manifest omits apiVersion passes (offline shape)', runGate(e), true)
 }
 
+// --- reserved ids ---
+//
+// The install loader (server/src/nest/plugins/install/manifest.ts: RESERVED_IDS) mounts
+// its own routes at /registry, /install, /rescan — a plugin published under one of those
+// ids would collide and is refused by every TREK. Catch it here so a colliding entry
+// never merges.
+{
+  const e = baseEntry()
+  e.id = 'registry'
+  expect('an entry with a reserved id ("registry") fails', runGate(e), false, '"registry" is a reserved plugin id')
+}
+{
+  const e = baseEntry()
+  e.id = 'registryx'
+  expect('an entry whose id merely contains a reserved word ("registryx") passes', runGate(e), true)
+}
+
+// --- versions[] newest-first ordering ---
+//
+// validate.yml and this script both grade versions[0] as the newly published version
+// ("newest-first by convention"); make the convention an invariant so an oldest-first
+// submission can't get the wrong commit graded (isNewlyPublished, the trek-range parity
+// checks, and the README grading in validate.yml all trust versions[0]).
+{
+  const e = baseEntry()
+  e.versions = [
+    { ...e.versions[0], version: '1.2.0', gitTag: 'v1.2.0' },
+    { ...e.versions[0], version: '1.1.0', gitTag: 'v1.1.0' },
+  ]
+  expect('versions[] sorted newest-first (1.2.0 before 1.1.0) passes', runGate(e), true)
+}
+{
+  const e = baseEntry()
+  e.versions = [
+    { ...e.versions[0], version: '1.1.0', gitTag: 'v1.1.0' },
+    { ...e.versions[0], version: '1.2.0', gitTag: 'v1.2.0' },
+  ]
+  expect(
+    'versions[] sorted oldest-first (1.1.0 before 1.2.0) fails',
+    runGate(e),
+    false,
+    'versions[] must be sorted newest-first (found 1.1.0 before 1.2.0)',
+  )
+}
+{
+  const e = baseEntry()
+  e.versions = [
+    { ...e.versions[0], version: '1.2.0-rc.1', gitTag: 'v1.2.0-rc.1' },
+    { ...e.versions[0], version: '1.1.0', gitTag: 'v1.1.0' },
+  ]
+  expect('a pre-release newest-first (1.2.0-rc.1 before 1.1.0) passes', runGate(e), true)
+}
+
 // --- icon ---
 //
 // TREK falls back to Blocks on an icon name lucide doesn't have, so a typo is invisible
@@ -332,6 +386,32 @@ expect('a well-formed signed entry passes', runGate(baseEntry()), true)
     expect(`trekFloor(${JSON.stringify(range)}) === ${JSON.stringify(want)}`, { ok: trekFloor(range) === want, out: String(trekFloor(range)) }, true)
   }
   expect('satisfiableRange rejects an empty range', { ok: !satisfiableRange('>=4.0.0 <3.0.0'), out: '' }, true)
+}
+
+// --- permission allowlist (permissionProblems, pure) ---
+//
+// TREK's installer only knows the permission ids in shared/src/plugin-permissions.ts (vendored
+// into scripts/lib/known-permissions.mjs) plus scoped http:outbound:<host> permissions whose
+// host matches the same HOST_RE the installer itself uses. An id outside that set is either a
+// typo (the plugin silently loses the capability at install) or a host TREK would refuse — this
+// runs offline against the network section's helper directly, the way trekFloor/satisfiableRange
+// are exercised above, since SKIP_NETWORK never reaches the manifest-parity block that calls it.
+{
+  const cases = [
+    [['db:read:trip'], ['unknown permission(s): db:read:trip']],
+    [['db:read:trips', 'http:outbound'], []],
+    [['http:outbound:api.example.com'], []],
+    [['http:outbound:*'], ['unknown permission(s): http:outbound:*']],
+    [['http:outbound:*.example.com'], []],
+  ]
+  for (const [perms, want] of cases) {
+    const got = permissionProblems(perms)
+    expect(
+      `permissionProblems(${JSON.stringify(perms)}) === ${JSON.stringify(want)}`,
+      { ok: JSON.stringify(got) === JSON.stringify(want), out: JSON.stringify(got) },
+      true,
+    )
+  }
 }
 
 // --- downloadCount: computed, never submitted ---

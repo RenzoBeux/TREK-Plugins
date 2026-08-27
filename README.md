@@ -1,6 +1,6 @@
 # TREK Plugins — Community Registry
 
-The registry for third-party [TREK](https://github.com/mauriceboe/TREK) plugins.
+The registry for third-party [TREK](https://github.com/liketrek/TREK) plugins.
 This repo is a **static index**: every TREK instance fetches one file,
 [`dist/index.json`](./dist/index.json), to show admins which plugins are
 available to install. There is no server and no account — you list a plugin by
@@ -94,7 +94,7 @@ CI therefore requires it on the version you are publishing, and pins it to the t
   satisfiable by nothing — it is rejected);
 - the entry's `trek` must equal the manifest's, verbatim.
 
-`trek-plugin entry` fills it in for you; don't write it by hand.
+`npx trek-plugin-sdk entry` fills it in for you; don't write it by hand.
 
 **`trek` is the only compatibility field a new entry needs.** `minTrekVersion` and
 `maxTrekVersion` are the older shape and are **deprecated** — the first said nothing the
@@ -203,3 +203,16 @@ owner needs a maintainer override.
 
 Registry metadata and tooling in this repo: MIT. Each listed plugin is licensed
 by its own author under its own terms.
+
+## Maintainer checklist: vendored snapshots
+
+A couple of generated files here are snapshots of data that also lives in TREK
+itself, and drift silently if only one side is regenerated:
+
+- **Lucide icon names** — when TREK bumps `lucide-react`, run
+  `node scripts/gen-lucide-icon-names.mjs` here **and** regenerate the SDK's
+  `src/lucide-icon-names.ts` in `trek-plugin-sdk`, from the same `lucide-react`
+  version. Both lists back the `icon` validation described above; regenerating
+  only one leaves them disagreeing about which names are valid.
+- **Known permissions** — when TREK adds a new plugin permission, run
+  `node scripts/gen-known-permissions.mjs` so the registry recognizes it.
