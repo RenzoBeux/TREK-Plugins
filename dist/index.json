@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-27T21:09:13.332Z",
+  "generatedAt": "2026-08-27T21:25:37.778Z",
   "plugins": [
     {
       "id": "amap-search",
@@ -463,6 +463,19 @@
       "icon": "Wallet",
       "versions": [
         {
+          "version": "2.0.0",
+          "gitTag": "v2.0.0",
+          "commitSha": "7127e0706fe8c2bc901792899b06956f89eb35e9",
+          "downloadUrl": "https://github.com/fbnlrz/suica-saver/releases/download/v2.0.0/plugin.zip",
+          "sha256": "dc5e8daf2fdc8d7bb99be7eb61599503d73eb2c027d681f97ee75614fa145455",
+          "trek": ">=4.0.0 <5.0.0",
+          "size": 23009,
+          "apiVersion": 1,
+          "nativeModules": false,
+          "publishedAt": "2026-08-27T15:53:44.361Z",
+          "signature": "1xjumDCzy+qRVmjkNmmdjFqTTk+rozDEJ7PGXs5t2RTp6vyhX6kW0xpy30fxAD2S3ZY8gVVsaE5eolnwXeQhAQ=="
+        },
+        {
           "version": "1.0.0",
           "gitTag": "v1.0.0",
           "commitSha": "e7c4fc1f7dfcf3ebe447b5a9544e75e7b5831ce7",
@@ -474,15 +487,15 @@
           "apiVersion": 1,
           "nativeModules": false,
           "publishedAt": "2026-07-05T21:07:59.988Z",
-          "signature": "ugwHDtjWwenLdpGrbmnJOFO2l0VMyfnuCGORkOgbJHyy6MpcfGZ8FSBjUsk55R8DAvr1zyoezE7tcMU+6jmZCQ=="
+          "signature": "FFy3JSwL+MtTKAPwFodqpxjHFDuCV7vyLEHgDPtSITn9DGU3GQ+URXMlM1Xe63SWyvafpl2bt21huz/wj+XXDQ=="
         }
       ],
       "homepage": "https://github.com/fbnlrz/suica-saver",
-      "authorPublicKey": "kdvtL1DEM+p49J1eVKTwDl//BFzRFJcOtkDoc0Ay2bM=",
-      "reviewedAt": "2026-07-18",
+      "authorPublicKey": "DJDfduAyHs2Ja/xhOyMkbCAcreMZZyKuz70PqTyfYM0=",
+      "reviewedAt": "2026-08-27",
       "boundOwner": "fbnlrz",
       "downloadCount": 109,
-      "screenshotUrl": "https://raw.githubusercontent.com/fbnlrz/suica-saver/e7c4fc1f7dfcf3ebe447b5a9544e75e7b5831ce7/docs/screenshot.png"
+      "screenshotUrl": "https://raw.githubusercontent.com/fbnlrz/suica-saver/7127e0706fe8c2bc901792899b06956f89eb35e9/docs/screenshot.png"
     },
     {
       "id": "transport-search",
