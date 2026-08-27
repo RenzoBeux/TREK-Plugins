@@ -31,7 +31,8 @@
       "size": 79830,
       "apiVersion": 1,
       "nativeModules": false,
-      "publishedAt": "2026-07-07T12:47:58.000Z"
+      "publishedAt": "2026-07-07T12:47:58.000Z",
+      "signature": "SVeFzdzSH5bMds4I9geO/TcKCADlDT+d5qIim85y6B/l0WV42D7RzSqqOMyuB/iGUwyozKDcWwEj3XZ5ktWoDw=="
     },
     {
       "version": "1.0.0",
@@ -44,7 +45,8 @@
       "size": 54581,
       "apiVersion": 1,
       "nativeModules": false,
-      "publishedAt": "2026-07-06T00:14:58.028Z"
+      "publishedAt": "2026-07-06T00:14:58.028Z",
+      "signature": "OmscztHROD/KA53hbtZtug8/VSlATv/ldPtjZ1Usk/eGDr312F1UPBbS4ASAry+BMOHroTSWx8RM2+nWGQwdBA=="
     }
   ],
   "homepage": "https://github.com/fbnlrz/trek-x-japan",
