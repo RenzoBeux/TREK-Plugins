@@ -2,11 +2,24 @@
   "id": "trek-x-japan",
   "name": "TREK × Japan",
   "author": "fbnlrz",
-  "description": "A collaborative in-trip hub for Japan",
+  "description": "Collaborative in-trip Japan hub",
   "repo": "fbnlrz/trek-x-japan",
   "type": "trip-page",
   "icon": "Compass",
   "versions": [
+    {
+      "version": "4.0.0",
+      "gitTag": "v4.0.0",
+      "commitSha": "438d7477a2b24f43c1ed7eec4f3dacc8956e2c13",
+      "downloadUrl": "https://github.com/fbnlrz/trek-x-japan/releases/download/v4.0.0/plugin.zip",
+      "sha256": "a57e6b2d02d18071169dc0b5760bf63752fcb1c7d2d50661a3dd0b4f508efe60",
+      "trek": ">=4.0.0 <5.0.0",
+      "size": 202821,
+      "apiVersion": 1,
+      "nativeModules": false,
+      "publishedAt": "2026-08-27T14:47:33.676Z",
+      "signature": "RHoDfoV5ajNDXx2abCg8LnmqjYgIcP6Z8chRhaOzhFntPxoGN3HsoharqzMGYGAz1nmvlH7PMAD3VsGuMUMRAg=="
+    },
     {
       "version": "1.2.0",
       "gitTag": "v1.2.0",
@@ -36,5 +49,6 @@
   ],
   "homepage": "https://github.com/fbnlrz/trek-x-japan",
   "reviewedAt": "2026-07-18",
-  "boundOwner": "fbnlrz"
+  "boundOwner": "fbnlrz",
+  "authorPublicKey": "DJDfduAyHs2Ja/xhOyMkbCAcreMZZyKuz70PqTyfYM0="
 }
